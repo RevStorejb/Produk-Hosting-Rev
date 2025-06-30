@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Franki Hosting Web</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+    header {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #222;
+    }
+    nav a {
+      padding: 14px 20px;
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+    }
+    nav a.active {
+      color: #00aaff;
+      border-bottom: 2px solid #00aaff;
+    }
+    .container {
+      padding: 20px;
+    }
+    .card {
+      background: #2b2b2b;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .card h3 {
+      color: #3ebff8;
+    }
+    .card p {
+      color: #ccc;
+    }
+    .price {
+      color: #5eff87;
+      font-weight: bold;
+    }
+    .btn {
+      background: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background: #1e1e1e;
+      padding: 30px;
+      text-align: center;
+      color: #00aaff;
+    }
+    .cart-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00aaff;
+      border-radius: 50%;
+      padding: 15px;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .cart-count {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: red;
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      padding: 2px 6px;
+    }
+    .checkout-wa {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background: green;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>REV HOSTING</h1>
+  <p>Solusi Hosting Terbaik untuk Kebutuhan Anda</p>
+</header>
+
+<nav>
+  <a href="#panel" class="active">PANEL</a>
+  <a href="#vps">BOT PUSH KONTAK</a>
+  <a href="#script">PRODUK LAIN</a>
+</nav>
+
+<div class="container" id="panel">
+  <div class="card">
+    <h3>PANEL 4GB</h3>
+    <p>Panel dengan resource 4GB untuk kebutuhan dasar Anda.</p>
+    <p class="price">Rp 3.000</p>
+    <button class="btn" onclick="addToCart('PANEL 4GB', 3000)">+ Keranjang</button>
+  </div>
+  <div class="card">
+    <h3>PANEL 7GB</h3>
+    <p>Panel dengan resource 7GB untuk kebutuhan menengah.</p>
+    <p class="price">Rp 5.000</p>
+    <button class="btn" onclick="addToCart('PANEL 7GB', 5000)">+ Keranjang</button>
+  </div>
+  <div class="card">
+    <h3>PANEL 10GB</h3>
+    <p>Panel dengan resource 10GB untuk kebutuhan tinggi.</p>
+    <p class="price">Rp 7.000</p>
+    <button class="btn" onclick="addToCart('PANEL 10GB', 7000)">+ Keranjang</button>
+  </div>
+  <div class="card">
+    <h3>PANEL UNLIMITED</h3>
+    <p>Panel dengan resource tidak terbatas untuk kebutuhan berat.</p>
+    <p class="price">Rp 8.000</p>
+    <button class="btn" onclick="addToCart('PANEL UNLIMITED', 8000)">+ Keranjang</button>
+  </div>
+</div>
+
+<div class="container" id="BOT PUSH KONTAK">
+  <div class="card"><h3>BOT PUSH 1 HARI</h3><p>Durasi: 1 Hari</p><p class="price">Rp 3.000</p><button class="btn" onclick="addToCart('BOT PUSH 1 HARI', 3000)">+ Keranjang</button></div>
+  <div class="card"><h3>BOT PUSH 3 HARI</h3><p>Durasi: 3 Hari</p><p class="price">Rp 5.000</p><button class="btn" onclick="addToCart('BOT PUSH 3 HARI', 5000)">+ Keranjang</button></div>
+  <div class="card"><h3>BOT PUSH 7 HARI</h3><p>Durasi: 7 Hari</p><p class="price">Rp 10.000</p><button class="btn" onclick="addToCart('BOT PUSH 7 HARI', 10000)">+ Keranjang</button></div>
+  <div class="card"><h3>BOT PUSH 14 HARI</h3><p>Durasi: 14 Hari</p><p class="price">Rp 15.000</p><button class="btn" onclick="addToCart('BOT PUSH 14 HARI', 15000)">+ Keranjang</button></div>
+  <div class="card"><h3>BOT PUSH 17 HARI</h3><p>Durasi: 17 Hari</p><p class="price">Rp 20.000</p><button class="btn" onclick="addToCart('BOT PUSH 17 HARI', 20000)">+ Keranjang</button></div>
+  <div class="card"><h3>BOT PUSH 20 HARI</h3><p>Durasi: 20 Hari</p><p class="price">Rp 25.000</p><button class="btn" onclick="addToCart('BOT PUSH 20 HARI', 25000)">+ Keranjang</button></div>
+  <div class="card"><h3>BOT PUSH 24 HARI</h3><p>Durasi: 24 Hari</p><p class="price">Rp 30.000</p><button class="btn" onclick="addToCart('BOT PUSH 24 HARI', 30000)">+ Keranjang</button></div>
+  <div class="card"><h3>BOT PUSH 1 BULAN</h3><p>Durasi: 1 Bulan</p><p class="price">Rp 35.000</p><button class="btn" onclick="addToCart('BOT PUSH 1 BULAN', 35000)">+ Keranjang</button></div>
+</div>
+
+<div class="container" id="PRODUK LAIN">
+  <div class="card"><h3>RESELLER PANEL</h3><p>Akses panel untuk reseller.</p><p class="price">Rp 5.000</p><button class="btn" onclick="addToCart('RESELLER PANEL', 5000)">+ Keranjang</button></div>
+  <div class="card"><h3>ADMIN PANEL</h3><p>Panel dengan kontrol admin penuh.</p><p class="price">Rp 10.000</p><button class="btn" onclick="addToCart('ADMIN PANEL', 10000)">+ Keranjang</button></div>
+  <div class="card"><h3>OWNER PANEL</h3><p>Panel dengan hak kepemilikan.</p><p class="price">Rp 15.000</p><button class="btn" onclick="addToCart('OWNER PANEL', 15000)">+ Keranjang</button></div>
+  <div class="card"><h3>PT PANEL</h3><p>Panel perusahaan resmi.</p><p class="price">Rp 23.000</p><button class="btn" onclick="addToCart('PT PANEL', 23000)">+ Keranjang</button></div>
+  <div class="card"><h3>MURBUG</h3><p>Layanan murah bugting.</p><p class="price">Rp 25.000</p><button class="btn" onclick="addToCart('MURBUG', 25000)">+ Keranjang</button></div>
+  <div class="card"><h3>JASBUG</h3><p>Jasa bugting cepat.</p><p class="price">Rp 2.000</p><button class="btn" onclick="addToCart('JASBUG', 2000)">+ Keranjang</button></div>
+</div>
+
+<footer>
+  <p>Hubungi Kami</p>
+</footer>
+
+<div class="cart-icon" onclick="alertCart()">
+  🛒<span class="cart-count" id="cartCount">0</span>
+</div>
+
+<button class="checkout-wa" onclick="checkoutWA()">Checkout via WhatsApp</button>
+
+<script>
+  let cart = [];
+  let total = 0;
+
+  function addToCart(item, price) {
+    cart.push({ name: item, price: price });
+    document.getElementById("cartCount").innerText = cart.length;
+  }
+
+  function alertCart() {
+    if (cart.length === 0) {
+      alert("Keranjang masih kosong.");
+    } else {
+      let message = cart.map(item => `- ${item.name} (Rp ${item.price.toLocaleString('id-ID')})`).join("\n");
+      alert("Isi Keranjang:\n" + message);
+    }
+  }
+
+  function checkoutWA() {
+    if (cart.length === 0) {
+      alert("Keranjang masih kosong.");
+      return;
+    }
+
+    let listPesanan = cart.map(item => `➡️ *${item.name}*`).join('\n');
+    let totalHarga = cart.reduce((sum, item) => sum + item.price, 0);
+
+    let pesan = `📢 *PESANAN BARU - REV HOSTING* 📢
+
+Halo Admin Rev Hosting,
+Saya ingin memesan produk berikut:
+
+📋 *Daftar Pesanan:*
+${listPesanan}
+
+💰 *Total Pembayaran:* Rp${totalHarga.toLocaleString('id-ID')}
+
+🛒 *Metode Pembayaran:*
+1. E-Wallet (DANA/GoPay)
+2. QRIS
+
+Mohon konfirmasi ketersediaan produk dan detail pembayaran.
+Terima kasih! 🙏`;
+
+    let encoded = encodeURIComponent(pesan);
+    window.open(`https://wa.me/6285828481568?text=${encoded}`, '_blank');
+  }
+</script>
+
+</body>
+</html>
